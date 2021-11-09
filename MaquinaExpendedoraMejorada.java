@@ -73,7 +73,7 @@ public class MaquinaExpendedoraMejorada {
             System.out.println("Necesitas introducir " + (cantidadDeDineroQueFalta) + " euros mas!");                    
         }            
     }
-    
+       
     /**
      * Cancela la operacion de compra del cliente actual y le
      * devuelve al cliente el dinero que ha introducido hasta el momento
@@ -83,5 +83,15 @@ public class MaquinaExpendedoraMejorada {
         cantidadDeDineroADevolver = balanceClienteActual;
         balanceClienteActual = 0;
         return cantidadDeDineroADevolver;
+    }
+
+    /**
+     * Vacía todo el dinero que hay en la máquina.
+     */
+    public int vaciarDineroDeLaMaquina() {
+        int totalDeDineroVaciar = totalDineroAcumulado + balanceClienteActual;
+        balanceClienteActual = 0;
+        totalDineroAcumulado = 0;
+        return totalDeDineroVaciar;
     }
 }
