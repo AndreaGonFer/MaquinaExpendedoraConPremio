@@ -78,7 +78,7 @@ public class MaquinaExpendedoraMejorada {
             if (premio == true) {
                 System.out.println("# Descuento de " + (precioBillete*10/100) + " euros en el cine.");
             }
-        }
+        }        
         else {
             System.out.println("Necesitas introducir " + (cantidadDeDineroQueFalta) + " euros mas!");
         } 
