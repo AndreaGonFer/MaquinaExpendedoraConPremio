@@ -87,8 +87,10 @@ public class MaquinaExpendedoraMejorada {
                 // Reduce el balance del cliente actual dejandole seguir utilizando la maquina
                 balanceClienteActual = balanceClienteActual - precioBillete;
                 numeroBilletesVendidos = numeroBilletesVendidos + 1;
-                if (premio == true) {
-                    System.out.println("# Descuento de " + (precioBillete*10/100) + " euros en el cine.");
+                if (numeroBilletesVendidos == 3) {
+                    if (premio == true) {
+                        System.out.println("# Descuento de " + (precioBillete*10/100) + " euros en el cine.");
+                    }
                 }
             }        
             else {
